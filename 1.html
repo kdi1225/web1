@@ -1,23 +1,82 @@
+
 <!doctype html>
 <html>
-
-<head>
-<title>k_web</title>
-<meta charset="utf-8">
-
-<style>
-  h1 {
-    color:red;
-    font-size:45px;
-    text-align: center;
-  }
-</style>
-</head>
+  <head>
+    <title>k_web</title>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  </head>
 
 <body>
+<!-- 제목 -->
 <p>
-  <h1>쩌쥬</h1>
+  <h1>Main Secreen</h1>
 </p>
-</body>
 
+<!-- 검색창 -->
+<div>
+  <input type="text" id="search">
+  <input type="button" value="검색" id="searchbtn">
+</div>
+
+<!-- SEASON1 -->
+<div>
+  <fieldset>
+    <legend>Season1</legend>
+      <ul>
+        <li><a id=name href="">1a</a></li>
+        <li>1b</li>
+        <li>1c</li>
+        <li>1d</li>
+      </ul>
+  </fieldset>
+</div>
+
+<!-- SEASON2 -->
+<div>
+  <fieldset>
+    <legend>Season2</legend>
+      <ul>
+        <li>2a</li>
+        <li>2b</li>
+        <li>2c</li>
+        <li>2d</li>
+      </ul>
+  </fieldset>
+</div>
+
+<!-- SEASON3 -->
+<div>
+  <fieldset>
+    <legend>Season3</legend>
+      <ul>
+        <li>3a</li>
+        <li>3b</li>
+        <li>3c</li>
+        <li>3d</li>
+      </ul>
+  </fieldset>
+</div>
+
+<!-- Script(jQuery) -->
+<script type="text/javascript">
+  $(document).ready(function(){
+
+      //id=searchbtn 버튼 클릭했을 때
+      $('#searchbtn').click(function (){
+        var searchtext = $('#search').val();
+        alert(searchtext);
+      });
+
+      //id=name 텍스트 클릭했을 때
+      $('#name').click(function (){
+        var name = $(this).text();
+        alert(name);
+        //$(this).attr('href',name);
+      });
+
+  });
+</script>
+
+</body>
 </html>
